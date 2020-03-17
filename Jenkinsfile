@@ -11,12 +11,6 @@ pipeline {
       }
     }
         
-    stage('Install dependencies') {
-      steps {
-        sh 'npm install'
-        sh 'npm run bowerInstall'
-      }
-    }
      
     stage('Test') {
       steps {
