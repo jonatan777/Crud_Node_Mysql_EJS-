@@ -7,11 +7,11 @@ const consign = require('consign');
 //configuração do banco
 var config = require('./config')
 var dbOptions = {
-	host:	  config.database.host,
-	user: 	  config.database.user,
-	password: config.database.password,
-	port: 	  config.database.port, 
-	database: config.database.db
+		host:	  config.database.host,
+		user: 	  config.database.user,
+		password: config.database.password,
+		port: 	  config.database.port, 
+		database: config.database.db
 }
 //conexão com o banco
 app.use(myConnection(mysql, dbOptions, 'pool'))
