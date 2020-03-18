@@ -13,14 +13,14 @@ pipeline {
 	    }
     
     
-        stage('STAGE 00'){
+        stage('STAGE 01'){
               steps{
                  echo "Pipeline Usando Jenkinsfile"
              }
         }
          
 
-         stage('STAGE 01'){
+         stage('STAGE 02'){
              steps{
                  echo "Pipeline Usando Jenkinsfile"
             }
