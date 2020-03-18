@@ -3,16 +3,21 @@ pipeline {
     
   tools {nodejs "node"}
     
-pipeline {
-     agent any
 
    stages {
      
-         stage('STAGE 00'){
-             steps{
+	   stage('STAGE 00'){
+	              steps{
+	                 echo "Pipeline Usando Jenkinsfile"
+	             }
+	    }
+    
+    
+        stage('STAGE 00'){
+              steps{
                  echo "Pipeline Usando Jenkinsfile"
              }
-         }
+        }
          
 
          stage('STAGE 01'){
@@ -20,18 +25,21 @@ pipeline {
                  echo "Pipeline Usando Jenkinsfile"
             }
          }
-   }
+         
+       stage('Test') {
+	      steps {
+	         sh 'npm test'
+	      }
+       }
+    
+      
+}
      
      
-   stage('Test') {
-      steps {
-         sh 'npm test'
-      }
-    }
+   
      
      
      
 }
             
           
-}
