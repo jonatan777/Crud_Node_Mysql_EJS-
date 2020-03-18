@@ -3,13 +3,23 @@ pipeline {
     
   tools {nodejs "node"}
     
-  stages {
-        
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/jonatan777/Crud_Node_Mysql_EJS-.git'
-      }
-    }
+  pipeline {
+     agent any
+
+     stages {
+         stage('STAGE 00'){
+             steps{
+                 echo "Pipeline Usando Jenkinsfile"
+             }
+         }
+
+         stage('STAGE 01'){
+             steps{
+                 echo "Pipeline Usando Jenkinsfile"
+            }
+         }
+     }
+ }
         
      
     stage('Test') {
